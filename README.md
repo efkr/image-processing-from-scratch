@@ -12,9 +12,9 @@ It was developed as part of a Computer Vision assignment in my master's program.
 ## Requirements
 To run the project, you’ll need:
 
-NumPy: For numerical operations and matrix manipulation.
+- NumPy: For numerical operations and matrix manipulation.
 
-OpenCV: For image reading, displaying, and saving.
+- OpenCV: For image reading, displaying, and saving.
 
 ---
 
@@ -46,18 +46,18 @@ These filters are often applied before edge detection to reduce noise and improv
 ---
 
 ### 🔹 Edge Detection
-Edges represent regions of rapid intensity change.  
-Different operators detect edges by approximating gradients:
+Edges represent regions of rapid intensity change. These edges represent important features like object boundaries.Different operators detect edges by approximating gradients:
 
-- **Sobel operator:** Uses weighted differences to emphasize central pixels.  
+- **Sobel operator:** Uses weighted differences to emphasize central pixels. It’s sensitive to horizontal and vertical edges.  
 - **Prewitt operator:** Simpler gradient approximation using uniform weights.  
-- **Laplacian operator:** Detects edges by computing the second derivative (highlights all intensity transitions).
+- **Laplacian operator:** Computes the second derivative of the image. It detects rapid intensity changes in all directions, highlighting edges.
 
 ---
 
 ## 🧪 Results
 
 ### Original and Grayscale
+The first step in most image processing pipelines is converting the image to grayscale. This simplifies further operations like edge detection and filtering.
 | Original | Grayscale |
 |-----------|------------|
 | ![Original](Resources/Moonrise_Kingdom.png) | ![Grayscale](results/GrayScale.png) |
@@ -68,7 +68,7 @@ Different operators detect edges by approximating gradients:
 | ![Gaussian](results/Gaussian_noise.png) | ![Salt & Pepper](results/Salt&pepper_noise.png) |
 
 ### Filtered Images
-Filtering images after applying salt & pepper noise. Using kernel, window_size = 3 .
+Filtering images after applying noise. Using kernel, window_size = 3 .
 | Mean Filter | Median Filter |
 |--------------|----------------|
 | ![Mean](results/mean.png) | ![Median](results/median.png) |
